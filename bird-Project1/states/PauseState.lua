@@ -51,6 +51,9 @@ end
     Called when this state is transitioned to from another state.
 ]]
 function PauseState:enter(params)
+    sounds['music']:pause()
+    sounds['pause']:play()
+
     if params then
         self.bird = params.bird
         self.pipePairs = params.pipePairs
@@ -64,6 +67,9 @@ end
     Called when this state changes to another state.
 ]]
 function PauseState:exit()
+    sounds['unpause']:play()
+    sounds['music']:play()
+
     -- stop scrolling for the death/score screen
     scrolling = true
 end
