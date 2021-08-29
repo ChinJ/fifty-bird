@@ -10,9 +10,9 @@
 
 ScoreState = Class{__includes = BaseState}
 
-local goldMedal = love.graphics.newImage('images/gold.png')
-local silverMedal = love.graphics.newImage('images/silver.png')
-local bronzeMedal = love.graphics.newImage('images/bronze.png')
+local goldMedal = love.graphics.newImage('gold.png')
+local silverMedal = love.graphics.newImage('silver.png')
+local bronzeMedal = love.graphics.newImage('bronze.png')
 
 --[[
     When we enter the score state, we expect to receive the score
